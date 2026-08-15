@@ -28,10 +28,9 @@ export default function Home() {
 
       <section className="intro">
         <p className="kicker">Notebook</p>
-        <h1>Essays for the second half of an idea.</h1>
+        <h1>Random Ideas from a Physicist</h1>
         <p>
-          Long-form notes on research, systems, agency, and the small frictions
-          that turn into useful thoughts.
+          Records of random thoughts on information, spacetime, AI, civilization, and anything else I thought about.
         </p>
       </section>
 
