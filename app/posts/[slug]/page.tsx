@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
+import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
 import { GiscusComments } from "@/app/components/GiscusComments";
 import { formatPostDate, getAllPosts, getPost } from "@/lib/posts";
 
@@ -88,7 +90,10 @@ export default async function PostPage({ params }: PostPageProps) {
 
         <div className="article-layout">
           <div className="post-body">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            <ReactMarkdown
+              rehypePlugins={[rehypeKatex]}
+              remarkPlugins={[remarkGfm, remarkMath]}
+            >
               {post.content}
             </ReactMarkdown>
           </div>

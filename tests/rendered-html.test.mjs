@@ -5,7 +5,8 @@ import test from "node:test";
 test("builds the blog home page", async () => {
   const html = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
   assert.match(html, /<title>Xiaoliang Qi<\/title>/i);
-  assert.match(html, /Essays for the second half of an idea/);
+  assert.match(html, /Random Ideas from a Physicist/);
+  assert.match(html, /What Is Life\? -- Question Revisited in the AI Era/);
   assert.match(html, /Welcome to the Notebook/);
   assert.match(html, /Working in Public/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|SkeletonPreview/);
@@ -21,4 +22,17 @@ test("builds an article page with giscus comments", async () => {
   assert.match(html, /The writing should be the loudest thing on the page/);
   assert.match(html, /Comments/);
   assert.match(html, /giscus/);
+});
+
+test("renders inline and display math with KaTeX", async () => {
+  const html = await readFile(
+    new URL("../out/posts/what-is-life-ai/index.html", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(html, /katex/);
+  assert.match(html, /katex-display/);
+  assert.match(html, /katex-mathml/);
+  assert.match(html, /<annotation encoding="application\/x-tex">Z<\/annotation>/);
+  assert.match(html, /<annotation encoding="application\/x-tex">L = \\sum_i/);
 });
