@@ -22,6 +22,10 @@ test("builds an article page with giscus comments", async () => {
   assert.match(html, /The writing should be the loudest thing on the page/);
   assert.match(html, /Comments/);
   assert.match(html, /giscus/);
+  assert.ok(
+    html.indexOf("The writing should be the loudest thing on the page") <
+      html.indexOf("Comments"),
+  );
 });
 
 test("renders inline and display math with KaTeX", async () => {

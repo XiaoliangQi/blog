@@ -251,9 +251,6 @@ button {
 }
 
 .article-layout {
-  display: grid;
-  gap: clamp(30px, 6vw, 64px);
-  grid-template-columns: minmax(0, 1fr) 260px;
   padding-top: 42px;
 }
 
@@ -312,64 +309,10 @@ button {
 }
 
 .comments-panel {
-  align-self: start;
-  border-left: 1px solid var(--line);
-  padding-left: 24px;
-  position: sticky;
-  top: 24px;
-}
-
-.comments-panel form {
-  display: grid;
-  gap: 12px;
-  margin-top: 14px;
-}
-
-.field {
-  display: grid;
-  gap: 6px;
-}
-
-.field span {
-  color: var(--muted);
-  font-size: 0.86rem;
-}
-
-.field input,
-.field textarea {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  color: var(--foreground);
-  min-width: 0;
-  padding: 10px 11px;
-  width: 100%;
-}
-
-.field textarea {
-  min-height: 118px;
-  resize: vertical;
-}
-
-.field input:focus,
-.field textarea:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
-  outline: none;
-}
-
-.comment-submit {
-  background: var(--foreground);
-  border: 1px solid var(--foreground);
-  border-radius: 6px;
-  color: var(--background);
-  min-height: 42px;
-  padding: 10px 14px;
-}
-
-.comment-submit:disabled {
-  cursor: wait;
-  opacity: 0.62;
+  border-top: 1px solid var(--line);
+  margin-top: clamp(42px, 7vw, 72px);
+  max-width: 700px;
+  padding-top: 28px;
 }
 
 .giscus-frame {
@@ -396,8 +339,7 @@ button {
     white-space: normal;
   }
 
-  .post-row,
-  .article-layout {
+  .post-row {
     grid-template-columns: 1fr;
   }
 
@@ -408,11 +350,7 @@ button {
   }
 
   .comments-panel {
-    border-left: 0;
-    border-top: 1px solid var(--line);
-    padding-left: 0;
-    padding-top: 30px;
-    position: static;
+    margin-top: 40px;
   }
 }
 
