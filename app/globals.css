@@ -297,6 +297,13 @@ button {
   padding: 0.1em 0.3em;
 }
 
+.post-body img {
+  display: block;
+  height: auto;
+  margin: 1.6em auto 0.8em;
+  max-width: 100%;
+}
+
 .post-body .katex-display {
   margin: 1.35em 0;
   overflow-x: auto;

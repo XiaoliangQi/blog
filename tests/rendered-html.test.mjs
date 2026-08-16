@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 test("builds the blog home page", async () => {
@@ -30,13 +30,18 @@ test("builds an article page with giscus comments", async () => {
 
 test("renders inline and display math with KaTeX", async () => {
   const html = await readFile(
-    new URL("../out/posts/what-is-life-ai/index.html", import.meta.url),
+    new URL("../out/posts/draft_v1/index.html", import.meta.url),
     "utf8",
   );
 
   assert.match(html, /katex/);
   assert.match(html, /katex-display/);
   assert.match(html, /katex-mathml/);
-  assert.match(html, /<annotation encoding="application\/x-tex">Z<\/annotation>/);
+  assert.match(html, /<annotation encoding="application\/x-tex">p_n<\/annotation>/);
   assert.match(html, /<annotation encoding="application\/x-tex">L = \\sum_i/);
+});
+
+test("copies post figures into the static export", async () => {
+  await access(new URL("../out/posts/draft_v1/fig1.png", import.meta.url));
+  await access(new URL("../out/posts/draft_v1/fig2.png", import.meta.url));
 });
