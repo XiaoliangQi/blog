@@ -333,6 +333,11 @@ button {
   padding-left: 18px;
 }
 
+.post-body a[id]:empty {
+  display: block;
+  scroll-margin-top: 24px;
+}
+
 .post-body code {
   background: var(--soft);
   border-radius: 4px;

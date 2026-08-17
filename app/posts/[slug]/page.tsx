@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
+import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import { GiscusComments } from "@/app/components/GiscusComments";
@@ -94,7 +95,7 @@ export default async function PostPage({ params }: PostPageProps) {
         <div className="article-layout">
           <div className="post-body">
             <ReactMarkdown
-              rehypePlugins={[rehypeKatex]}
+              rehypePlugins={[rehypeRaw, rehypeKatex]}
               remarkPlugins={[remarkGfm, remarkMath]}
             >
               {post.content}

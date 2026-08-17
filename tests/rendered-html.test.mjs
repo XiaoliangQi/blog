@@ -44,6 +44,18 @@ test("renders inline and display math with KaTeX", async () => {
   assert.match(html, /<annotation encoding="application\/x-tex">L = \\sum_i/);
 });
 
+test("renders local html anchors for figures and references", async () => {
+  const html = await readFile(
+    new URL("../out/posts/what-is-life/index.html", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(html, /<a id="fig-circuit"><\/a>/);
+  assert.match(html, /<a id="ref-schrodinger1944what"><\/a>/);
+  assert.doesNotMatch(html, /&lt;a id=&quot;fig-circuit&quot;&gt;/);
+  assert.doesNotMatch(html, /&lt;a id=&quot;ref-schrodinger1944what&quot;&gt;/);
+});
+
 test("copies post figures into the static export", async () => {
   await access(new URL("../out/posts/what-is-life/fig1.png", import.meta.url));
   await access(new URL("../out/posts/what-is-life/fig2.png", import.meta.url));
