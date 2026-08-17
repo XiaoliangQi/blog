@@ -1,6 +1,6 @@
 ---
 title: "The Agentification of Scientific Research"
-date: "2026-08-15"
+date: "2026-08-14"
 summary: "A short summary of my article on how AI may change scientific collaboration, publishing, and discovery."
 ---
 
