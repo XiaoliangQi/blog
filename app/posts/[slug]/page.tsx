@@ -6,6 +6,7 @@ import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import { GiscusComments } from "@/app/components/GiscusComments";
+import { SocialLinks } from "@/app/components/SocialLinks";
 import { formatPostDate, getAllPosts, getPost } from "@/lib/posts";
 
 type PostPageProps = {
@@ -65,13 +66,15 @@ export default async function PostPage({ params }: PostPageProps) {
         <Link href="/" className="wordmark" aria-label="Xiaoliang Qi home">
           Xiaoliang Qi
         </Link>
-        <nav className="top-nav" aria-label="Primary navigation">
-          <Link href="/">Writing</Link>
-          <a href="https://github.com/XiaoliangQi/blog">GitHub</a>
-          <a href="https://github.com/XiaoliangQi/blog/discussions">
-            Discussions
-          </a>
-        </nav>
+        <div className="masthead-actions">
+          <nav className="top-nav" aria-label="Primary navigation">
+            <Link href="/">Posts</Link>
+            <a href="https://github.com/XiaoliangQi/blog/discussions">
+              Discussions
+            </a>
+          </nav>
+          <SocialLinks />
+        </div>
       </header>
 
       <article>

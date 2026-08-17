@@ -9,6 +9,9 @@ test("builds the blog home page", async () => {
   assert.match(html, /What Is Life\? -- Question Revisited in the AI Era/);
   assert.match(html, /Welcome to the Notebook/);
   assert.match(html, /Working in Public/);
+  assert.match(html, /post-card/);
+  assert.match(html, /Google Scholar/);
+  assert.match(html, /https:\/\/x.com\/Xiao_Liang_Qi/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|SkeletonPreview/);
 });
 
@@ -30,7 +33,7 @@ test("builds an article page with giscus comments", async () => {
 
 test("renders inline and display math with KaTeX", async () => {
   const html = await readFile(
-    new URL("../out/posts/draft_v1/index.html", import.meta.url),
+    new URL("../out/posts/what-is-life/index.html", import.meta.url),
     "utf8",
   );
 
@@ -42,6 +45,6 @@ test("renders inline and display math with KaTeX", async () => {
 });
 
 test("copies post figures into the static export", async () => {
-  await access(new URL("../out/posts/draft_v1/fig1.png", import.meta.url));
-  await access(new URL("../out/posts/draft_v1/fig2.png", import.meta.url));
+  await access(new URL("../out/posts/what-is-life/fig1.png", import.meta.url));
+  await access(new URL("../out/posts/what-is-life/fig2.png", import.meta.url));
 });
