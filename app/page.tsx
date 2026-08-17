@@ -29,7 +29,7 @@ export default function Home() {
       </header>
 
       <section className="home-info">
-        <h1>Random Ideas from a Physicist</h1>
+        <h1>My Dandelion Field</h1>
         <p>
           Records of random thoughts on information, spacetime, AI,
           civilization, and anything else I thought about.

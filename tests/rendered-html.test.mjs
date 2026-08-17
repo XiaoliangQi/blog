@@ -5,7 +5,7 @@ import test from "node:test";
 test("builds the blog home page", async () => {
   const html = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
   assert.match(html, /<title>Xiaoliang Qi<\/title>/i);
-  assert.match(html, /Random Ideas from a Physicist/);
+  assert.match(html, /My Dandelion Field/);
   assert.match(html, /What Is Life\? -- Question Revisited in the AI Era/);
   assert.match(html, /Agentic Publication Protocol/);
   assert.match(html, /The Agentification of Scientific Research/);
