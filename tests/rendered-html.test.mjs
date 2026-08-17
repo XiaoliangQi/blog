@@ -7,8 +7,10 @@ test("builds the blog home page", async () => {
   assert.match(html, /<title>Xiaoliang Qi<\/title>/i);
   assert.match(html, /Random Ideas from a Physicist/);
   assert.match(html, /What Is Life\? -- Question Revisited in the AI Era/);
-  assert.match(html, /Welcome to the Notebook/);
-  assert.match(html, /Working in Public/);
+  assert.match(html, /Agentic Publication Protocol/);
+  assert.match(html, /The Agentification of Scientific Research/);
+  assert.doesNotMatch(html, /Welcome to the Notebook/);
+  assert.doesNotMatch(html, /Working in Public/);
   assert.match(html, /post-card/);
   assert.match(html, /Google Scholar/);
   assert.match(html, /https:\/\/x.com\/Xiao_Liang_Qi/);
@@ -17,16 +19,16 @@ test("builds the blog home page", async () => {
 
 test("builds an article page with giscus comments", async () => {
   const html = await readFile(
-    new URL("../out/posts/welcome-to-the-notebook/index.html", import.meta.url),
+    new URL("../out/posts/agentic-publication/index.html", import.meta.url),
     "utf8",
   );
 
-  assert.match(html, /<title>Welcome to the Notebook \| Xiaoliang Qi<\/title>/i);
-  assert.match(html, /The writing should be the loudest thing on the page/);
+  assert.match(html, /<title>Agentic Publication Protocol \| Xiaoliang Qi<\/title>/i);
+  assert.match(html, /Instead of publishing papers, we should publish agents/);
   assert.match(html, /Comments/);
   assert.match(html, /giscus/);
   assert.ok(
-    html.indexOf("The writing should be the loudest thing on the page") <
+    html.indexOf("Instead of publishing papers, we should publish agents") <
       html.indexOf("Comments"),
   );
 });
@@ -59,4 +61,6 @@ test("renders local html anchors for figures and references", async () => {
 test("copies post figures into the static export", async () => {
   await access(new URL("../out/posts/what-is-life/fig1.png", import.meta.url));
   await access(new URL("../out/posts/what-is-life/fig2.png", import.meta.url));
+  await access(new URL("../out/posts/agentic-publication/APP_repo.png", import.meta.url));
+  await access(new URL("../out/posts/agentic-publication/APP_dev.png", import.meta.url));
 });
