@@ -1,14 +1,14 @@
 ---
 title: "Nonlocality of Concepts"
-date: "2026-08-17"
-summary: "A teaser for our article on using nonlocality to measure how abstract a language-model feature is."
+date: "2026-08-15"
+summary: "Nonlocality of concepts is an emerging dimension, just like how spacetime emerges from quantum information."
 ---
 
 Original article: [Measuring Semantic Abstractness of SAE Features via Nonlocality](https://arxiv.org/abs/2608.10537)
 
 Together with Chuqiao Lin and Shivaji Sondhi, I recently wrote an article about a question that came from physics: what does nonlocality mean for concepts?
 
-In holographic duality, which has been central in my own work, nonlocality is not just a technical complication. It is one of the clues that a lower-dimensional theory may contain an emergent geometric direction. Roughly speaking, length scale behaves like an extra dimension. This paper starts from a similar intuition, but asks the question inside language models.
+In holographic duality, which studied the relation between quantum mechanics and spacetime, nonlocality is not just a technical complication. It is one of the clues that a lower-dimensional theory may contain an emergent geometric direction. The motion of an object away from a point in space may be representing information that gets more and more inaccessible from the reference point. Roughly speaking, length scale behaves like an extra dimension. This paper starts from a similar intuition, but asks the question inside language models.
 
 If a model has a feature for a concept, how local is that feature? Does it fire because of a nearby token, like a name, a phrase, or a formatting cue? Or does it fire because information spread over many tokens collectively points to a more abstract idea, such as uncertainty, reasoning, or intent? In other words, can a concept inside a model have something like a length scale?
 
