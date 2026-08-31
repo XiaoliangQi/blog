@@ -1,12 +1,13 @@
 ---
 title: "The Dawn of Artificial Intelligence: An Information Dynamics Perspective on ChatGPT"
 date: "2023-05-20"
-summary: "A 2023 information-dynamics perspective on why ChatGPT marked a critical point for AI, language, scientific research, and society."
+summary: "An Apr. 2023 information-dynamics perspective on why ChatGPT marked a critical point for AI, language, scientific research, and society."
 ---
 
-Xiao-Liang Qi  
-Chinese version [published online](https://mp.weixin.qq.com/s/DJRSqwo0cWGOAgZM4As-OQ) on Apr. 24, 2023  
-Translated by ChatGPT Plus, with edits from the author
+<aside class="post-note">
+This is an article I wrote back in 2023 in Chinese<br>
+(<a href="https://mp.weixin.qq.com/s/DJRSqwo0cWGOAgZM4As-OQ">published online here</a> on Apr. 24, 2023) and translated to English by ChatGPT Plus in May of 2023 (with minor edits from me). The English version has never been published. I would like to post the original translation here as a record of my initial reaction to the AI shock brought to me by ChatGPT, although there are clearly things that should be improved in the translation.
+</aside>
 
 In recent months, the news about artificial intelligence (AI) has been overwhelming, making me feel like a resident in the Three-Body World[^1] watching the sunrise on the horizon, knowing that something significant is about to happen, but uncertain whether it will be one or two suns rising. At this moment, personal contemplation may not be particularly useful, but it is instinctive for humans to reflect. Therefore, I am writing down some of my basic thoughts here, for the purpose of sparking further discussion. It should be noted that this article is not an introduction to widely accepted scientific research results, but rather represents my personal opinions. There are probably mistakes and limitations in my understanding, and all comments are greatly welcome.
 
