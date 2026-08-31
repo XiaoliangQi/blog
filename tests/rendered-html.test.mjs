@@ -64,4 +64,5 @@ test("copies post figures into the static export", async () => {
   await access(new URL("../out/posts/what-is-life/fig2.png", import.meta.url));
   await access(new URL("../out/posts/agentic-publication/APP_repo.png", import.meta.url));
   await access(new URL("../out/posts/agentic-publication/APP_dev.png", import.meta.url));
+  await access(new URL("../out/posts/nonlocality-of-concepts/fig1.png", import.meta.url));
 });

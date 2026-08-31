@@ -10,6 +10,12 @@ Together with Chuqiao Lin and Shivaji Sondhi, I recently wrote an article about 
 
 In holographic duality, which studied the relation between quantum mechanics and spacetime, nonlocality is not just a technical complication. It is one of the clues that a lower-dimensional theory may contain an emergent geometric direction. The motion of an object away from a point in space may be representing information that gets more and more inaccessible from the reference point. Roughly speaking, length scale behaves like an extra dimension. This paper starts from a similar intuition, but asks the question inside language models.
 
+<a id="fig-nonlocality"></a>
+
+![A visual metaphor for nonlocality and emergent directions.](fig1.png)
+
+**Figure 1.** A visual metaphor for nonlocality and emergent directions.
+
 If a model has a feature for a concept, how local is that feature? Does it fire because of a nearby token, like a name, a phrase, or a formatting cue? Or does it fire because information spread over many tokens collectively points to a more abstract idea, such as uncertainty, reasoning, or intent? In other words, can a concept inside a model have something like a length scale?
 
 To make this question quantitative, we study sparse-autoencoder features and define feature nonlocality: a measure of how broadly the activation of a feature depends on earlier positions in the context. Low-nonlocality features behave like local detectors. High-nonlocality features have a longer contextual reach, and are better candidates for representing genuinely semantic or abstract information rather than surface tokens.
